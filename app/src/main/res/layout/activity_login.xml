@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical"
+    tools:context=".Activities.Login.LoginActivity">
+
+    <com.example.base_project.Utils.Views.CustomTitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="Informe suas credenciais"
+        app:subtitleText="kminchelle e 0lelplR"/>
+
+    <com.example.base_project.Utils.Views.CustomEditText
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fieldName="Usuário"
+        app:placeholder="000.000.000-00"
+        app:inputTextType="name"
+        app:minLength="5"
+        android:layout_marginTop="20dp"/>
+
+    <com.example.base_project.Utils.Views.CustomEditText
+        android:id="@+id/txtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fieldName="Senha"
+        app:placeholder="Digite sua senha"
+        app:inputTextType="password"
+        app:minLength="6"
+        android:layout_marginTop="10dp"/>
+
+    <com.example.base_project.Utils.Views.CustomButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:btnText="Login"
+        android:layout_marginTop="30dp"/>
+
+    <com.example.base_project.Utils.Views.CustomButton
+        android:id="@+id/btnGet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:btnText="Ir para Home"
+        android:layout_marginTop="30dp"/>
+
+
+
+
+</LinearLayout>

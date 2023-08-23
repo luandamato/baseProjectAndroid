@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/viewBg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtNomeCampo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nome Campo"
+            android:textColor="@color/color_primary"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:textColor="@color/black"
+            android:hint="Placeholder"
+            android:textSize="13dp"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/gray"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="texto de erro"
+        android:textSize="12dp"
+        android:textColor="@color/red"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

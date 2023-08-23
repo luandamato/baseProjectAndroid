@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    tools:context=".Activities.NewProduct.NewProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include android:id="@+id/navBar"
+        layout="@layout/layout_toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <com.example.base_project.Utils.Views.CustomTitleView
+                    android:id="@+id/viewTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:titleText="Novo Produto"
+                    app:subtitleText="Informe todos os dados do novo produto a ser inserido!"/>
+
+                <com.example.base_project.Utils.Views.CustomEditText
+                    android:id="@+id/txtNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="Nome"
+                    app:placeholder="nome"
+                    app:inputTextType="name"
+                    app:minLength="2"
+                    android:layout_marginTop="20dp"/>
+
+                <com.example.base_project.Utils.Views.CustomEditText
+                    android:id="@+id/txtOrigem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="Origem"
+                    app:placeholder="origem"
+                    app:inputTextType="name"
+                    app:minLength="2"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição do Produto"
+                    android:textColor="@color/color_primary"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"/>
+
+
+                <EditText
+                    android:id="@+id/txtDesc"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:lines="5"
+                    android:minLines="3"
+                    android:gravity="top|start"
+                    android:maxLines="10"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/round_corners"/>
+
+                <com.example.base_project.Utils.Views.CustomButton
+                    android:id="@+id/btnSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    app:btnText="Criar"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        android:indeterminateTintMode="src_in"
+        android:indeterminateTint="@color/color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
